@@ -1,0 +1,17 @@
+{
+    "/api": {
+      "target": "http://localhost:3000",
+      "secure": false
+    },
+    "/gdc/*": {
+      "changeOrigin": true,
+      "cookieDomainRewrite": "localhost",
+      "secure": false,
+      "target": "https://staging3.intgdc.com",
+      "headers": {
+        "host": "staging3.intgdc.com",
+        "origin": null
+      }
+    }
+   }
+   
