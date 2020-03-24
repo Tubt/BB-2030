@@ -18,7 +18,6 @@ interface PivotProps {
   measures :any[],
   rows: any[],
   columns :any[],
-  totals?: any
 }
 
 @Component({
@@ -38,7 +37,6 @@ export class PivotTableComponent implements OnInit {
       Model.attribute(MenuCategoryIdentifier).localIdentifier("menucategory")
   ]
 
-  totals = Model.measure(FranceFeeIdentifier).localIdentifier("france-fee")
 
   columns =[Model.attribute(LocationStateIdentifier).localIdentifier("state")]
 
@@ -57,7 +55,6 @@ export class PivotTableComponent implements OnInit {
       measures : this.measures,
       rows : this.attributes,
       columns : this.columns,
-      // totals : this.totals
     }
   } 
 
@@ -72,7 +69,8 @@ export class PivotTableComponent implements OnInit {
   }
   
   ngOnInit() {
-    this.rootDomID = uuid.v1;
+    // this.rootDomID = uuid.v1;
+    this.rootDomID = 'rootDomId'; 
   }
   ngOnChanges() {
     this.render();
