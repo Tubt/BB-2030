@@ -1,0 +1,16 @@
+
+<div style="height: 50px;">
+    <button class="myButton"
+    color="primary" 
+    [class.spinner]="loading" 
+    [disabled]="loading" 
+    (click)="onClick()"> Save As </button>
+</div>
+
+<p *ngIf="showMyMessage"  style="
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    border: 1px;">
+    <strong>Well done!</strong> You successfully read this important alert message.
+</p>

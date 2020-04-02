@@ -1,0 +1,24 @@
+<style> 
+    label {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+    }
+    h4 {
+        margin-bottom: 0;
+    }
+    label :global(.gd-input-field) {
+        min-width: 212px;
+    } 
+</style>
+<div className="s-month-picker">
+    <label className="s-month-picker-from" style ="min-width: 200px;">
+        <h4>From</h4>
+        <div class="s-month-picker" [id]="rootFromDomID" ></div>
+    </label>
+    <label className="s-month-picker-to"style ="min-width: 200px;">
+        <h4>To</h4>
+        <div class="s-month-picker" [id]="rootToDomID"></div>
+    </label>
+    <hr className="separator" />
+    <div class="s-month-picker-chart" style="height:300px" [id]="rootDomID"></div>
